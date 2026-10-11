@@ -3,21 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Jawan Bhai Marwadi Khichiya Wala</title>
-    <!-- Single Page Apps for GitHub Pages redirect script -->
     <script type="text/javascript">
-      // MIT License - https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 1;
+      // GitHub Pages SPA Hash Redirect
       var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      var pathSegments = l.pathname.split('/').filter(Boolean);
+      // If hosted on GitHub Pages subpath (e.g. username.github.io/repo-name/path)
+      var repo = pathSegments[0] || '';
+      var subPath = pathSegments.slice(1).join('/');
+      var target = l.protocol + '//' + l.host + '/' + (repo ? repo + '/' : '') + '#/' + subPath + (l.search || '') + (l.hash ? l.hash.replace(/^#/, '') : '');
+      window.location.replace(target);
     </script>
   </head>
   <body>
-    <p>Redirecting to Jawan Bhai Marwadi Khichiya Wala...</p>
+    <p>Loading Jawan Bhai Marwadi Khichiya Wala...</p>
   </body>
 </html>
