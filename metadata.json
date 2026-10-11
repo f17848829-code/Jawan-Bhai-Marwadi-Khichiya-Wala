@@ -1,0 +1,8 @@
+{
+  "name": "Jawan Bhai Marwadi Khichiya Wala",
+  "description": "Authentic Marwari khichiya and traditional snacks near Kaal Bhairav Mandir, close to Mumbadevi area, Mumbai. Packaged per-kg khichiya, fresh shop menu, and bulk orders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
