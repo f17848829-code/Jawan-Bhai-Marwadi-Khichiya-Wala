@@ -4,8 +4,9 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
-  const base = process.env.GITHUB_REPOSITORY
-    ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/`
+  const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
+  const base = repoName
+    ? (repoName.endsWith('.github.io') ? '/' : `/${repoName}/`)
     : (process.env.VITE_BASE_PATH || './');
 
   return {
@@ -13,7 +14,7 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(import.meta.dirname, '.'),
       },
     },
     server: {
