@@ -7,6 +7,32 @@
  * Never invent phone numbers, exact addresses, or unsupported claims.
  */
 
+// Import image assets so Vite bundles and resolves them in production & GitHub Pages
+import heroMarwadiKhichiya from '../assets/images/hero_marwadi_khichiya_1791632824607.jpg';
+import productWheatCornKhichiya from '../assets/images/product_wheat_corn_khichiya_1791632838334.jpg';
+import productMintCorianderKhichiya from '../assets/images/product_mint_coriander_khichiya_1791632856895.jpg';
+import productTikhaKhichiya from '../assets/images/product_tikha_khichiya_1791632867413.jpg';
+import freshMasalaKhichiyaShop from '../assets/images/fresh_masala_khichiya_shop_1791632879456.jpg';
+
+import galleryWheatRoasted from '../assets/images/gallery_wheat_roasted_1791634144058.jpg';
+import galleryWheatFriedSnack from '../assets/images/gallery_wheat_fried_snack_1791634160370.jpg';
+import galleryWheatSundrying from '../assets/images/gallery_wheat_sundrying_1791634182039.jpg';
+
+import galleryMintRoastedChutney from '../assets/images/gallery_mint_roasted_chutney_1791634197851.jpg';
+import galleryMintTextureMacro from '../assets/images/gallery_mint_texture_macro_1791634211701.jpg';
+
+import galleryTikhaRoastedFlame from '../assets/images/gallery_tikha_roasted_flame_1791634280712.jpg';
+import galleryTikhaChaatStyle from '../assets/images/gallery_tikha_chaat_style_1791634296089.jpg';
+import galleryTikhaSpiceMacro from '../assets/images/gallery_tikha_spice_macro_1791634309903.jpg';
+
+export {
+  heroMarwadiKhichiya,
+  productWheatCornKhichiya,
+  productMintCorianderKhichiya,
+  productTikhaKhichiya,
+  freshMasalaKhichiyaShop,
+};
+
 export interface ProductGalleryImage {
   id: string;
   url: string;
@@ -93,13 +119,13 @@ export const BUSINESS_CONFIG = {
       longDescription: 'Our signature staple Wheat-Corn Khichiya is crafted through time-tested Marwari techniques. Hand-rolled and sun-dried to brittle perfection, this khichiya puffs into an airy, crunchy delicacy when roasted directly over flame or fried in pure groundnut oil. Made with zero artificial preservatives.',
       ingredients: ['Wheat Flour', 'Corn Meal', 'Cumin (Jeera)', 'Carom Seeds (Ajwain)', 'Papad Khar', 'Salt', 'Spices'],
       bestUsedFor: ['Direct flame roasting', 'Deep frying for evening snacks', 'Base for street-style Masala Khichiya', 'Daily accompaniment with tea'],
-      image: '/src/assets/images/product_wheat_corn_khichiya_1791632838334.jpg',
+      image: productWheatCornKhichiya,
       imageAlt: 'Handcrafted stack of dried Wheat-Corn Khichiya discs',
       isRepresentativeImage: true,
       gallery: [
         {
           id: 'wc-1',
-          url: '/src/assets/images/product_wheat_corn_khichiya_1791632838334.jpg',
+          url: productWheatCornKhichiya,
           title: 'Sun-Dried Wheat-Corn Discs',
           caption: 'Hand-rolled raw khichiya discs dried to brittle perfection on traditional wooden racks.',
           alt: 'Neatly stacked sun-dried raw wheat-corn khichiya discs',
@@ -107,7 +133,7 @@ export const BUSINESS_CONFIG = {
         },
         {
           id: 'wc-2',
-          url: '/src/assets/images/gallery_wheat_roasted_1791634144058.jpg',
+          url: galleryWheatRoasted,
           title: 'Direct Flame Roasting',
           caption: 'Puffed golden blistered khichiya freshly roasted over gas flame with tongs.',
           alt: 'Crispy flame-roasted wheat corn khichiya blistered over gas stove',
@@ -115,7 +141,7 @@ export const BUSINESS_CONFIG = {
         },
         {
           id: 'wc-3',
-          url: '/src/assets/images/gallery_wheat_fried_snack_1791634160370.jpg',
+          url: galleryWheatFriedSnack,
           title: 'Crispy Chai Accompaniment',
           caption: 'Deep-fried puffed khichiya crisps served with hot cutting masala chai.',
           alt: 'Crunchy golden fried khichiya pieces in earthen bowl beside hot tea',
@@ -123,7 +149,7 @@ export const BUSINESS_CONFIG = {
         },
         {
           id: 'wc-4',
-          url: '/src/assets/images/gallery_wheat_sundrying_1791634182039.jpg',
+          url: galleryWheatSundrying,
           title: 'Artisanal Sun-Drying Heritage',
           caption: 'Authentic preparation method of laying fresh dough discs under the warm sun on clean muslin.',
           alt: 'Traditional khichiya drying process on white fabric under open sun',
@@ -141,13 +167,13 @@ export const BUSINESS_CONFIG = {
       longDescription: 'A cooling, aromatic specialty crafted with freshly ground mint leaves, green coriander, and traditional Marwari spices. Each sun-dried disc carries a distinctive green hue and refreshing herbal fragrance that elevates when heated. Perfect for elevated gatherings and tea-time crunch.',
       ingredients: ['Fine Wheat & Grain Flour', 'Fresh Mint (Pudina)', 'Fresh Coriander (Dhaniya)', 'Green Chilies', 'Cumin', 'Papad Khar', 'Rock Salt'],
       bestUsedFor: ['Light roasting', 'Crisp frying', 'Serving with coriander chutney and butter', 'High-tea snack platters'],
-      image: '/src/assets/images/product_mint_coriander_khichiya_1791632856895.jpg',
+      image: productMintCorianderKhichiya,
       imageAlt: 'Fresh herb-infused Mint-Coriander Khichiya discs on traditional brass ware',
       isRepresentativeImage: true,
       gallery: [
         {
           id: 'mc-1',
-          url: '/src/assets/images/product_mint_coriander_khichiya_1791632856895.jpg',
+          url: productMintCorianderKhichiya,
           title: 'Herbal Sun-Dried Discs',
           caption: 'Naturally green-flecked khichiya discs infused with fresh garden mint and coriander leaves.',
           alt: 'Sun-dried Mint-Coriander Khichiya discs stacked on brass plate',
@@ -155,7 +181,7 @@ export const BUSINESS_CONFIG = {
         },
         {
           id: 'mc-2',
-          url: '/src/assets/images/gallery_mint_roasted_chutney_1791634197851.jpg',
+          url: galleryMintRoastedChutney,
           title: 'Roasted with Green Chutney',
           caption: 'Crisp roasted mint khichiya disc brushed with butter and paired with zesty coriander dip.',
           alt: 'Roasted mint khichiya on bronze plate with spicy green chutney and lemon',
@@ -163,7 +189,7 @@ export const BUSINESS_CONFIG = {
         },
         {
           id: 'mc-3',
-          url: '/src/assets/images/gallery_mint_texture_macro_1791634211701.jpg',
+          url: galleryMintTextureMacro,
           title: 'Herb & Cumin Texture Macro',
           caption: 'Extreme close-up showing visible specks of sun-dried mint leaves and fragrant whole jeera.',
           alt: 'Macro photograph of mint coriander khichiya disc grain texture',
@@ -171,7 +197,7 @@ export const BUSINESS_CONFIG = {
         },
         {
           id: 'mc-4',
-          url: '/src/assets/images/fresh_masala_khichiya_shop_1791632879456.jpg',
+          url: freshMasalaKhichiyaShop,
           title: 'Street Style Topped Masala',
           caption: 'Mint khichiya prepared street-style with cucumber, tomatoes, sev namkeen, and chutneys.',
           alt: 'Loaded street style masala khichiya snack with chutney and toppings',
@@ -189,13 +215,13 @@ export const BUSINESS_CONFIG = {
       longDescription: 'For those who love robust Marwari heat, our Special Tikha Khichiya blends sun-dried grain discs with coarse Rajasthani red chili flakes, ajwain, and special spice masalas. It provides a savory kick that pairs exceptionally well with evening chai, cold beverages, or layered with diced onions and lemon.',
       ingredients: ['Grain Flour', 'Rajasthani Red Chili Flakes', 'Cracked Black Pepper', 'Carom Seeds (Ajwain)', 'Cumin', 'Papad Khar', 'Marwari Spice Blend'],
       bestUsedFor: ['Charcoal or flame roasting', 'Spicy evening chakhna/snack', 'Topped with raw onion, coriander & lime', 'Wholesale snack counters'],
-      image: '/src/assets/images/product_tikha_khichiya_1791632867413.jpg',
+      image: productTikhaKhichiya,
       imageAlt: 'Spiced red chili Tikha Khichiya discs stacked on earthenware',
       isRepresentativeImage: true,
       gallery: [
         {
           id: 'st-1',
-          url: '/src/assets/images/product_tikha_khichiya_1791632867413.jpg',
+          url: productTikhaKhichiya,
           title: 'Handcrafted Spicy Discs',
           caption: 'Coarse Rajasthani red chili and cumin studded khichiya discs resting on earthenware.',
           alt: 'Spiced red chili Tikha Khichiya stack on rustic earthenware',
@@ -203,7 +229,7 @@ export const BUSINESS_CONFIG = {
         },
         {
           id: 'st-2',
-          url: '/src/assets/images/gallery_tikha_roasted_flame_1791634280712.jpg',
+          url: galleryTikhaRoastedFlame,
           title: 'Charred Flame Roast',
           caption: 'Crisp roasted spicy khichiya with caramelized red chili blisters on an antique brass thali.',
           alt: 'Flame-roasted spicy tikha khichiya with charred spice blisters',
@@ -211,7 +237,7 @@ export const BUSINESS_CONFIG = {
         },
         {
           id: 'st-3',
-          url: '/src/assets/images/gallery_tikha_chaat_style_1791634296089.jpg',
+          url: galleryTikhaChaatStyle,
           title: 'Spicy Chaat Style Snack',
           caption: 'Broken spiced tikha khichiya seasoned with chopped red onions, lime juice, and chaat spices.',
           alt: 'Broken spicy tikha khichiya street snack in leaf bowl with chopped onion and lime',
@@ -219,7 +245,7 @@ export const BUSINESS_CONFIG = {
         },
         {
           id: 'st-4',
-          url: '/src/assets/images/gallery_tikha_spice_macro_1791634309903.jpg',
+          url: galleryTikhaSpiceMacro,
           title: 'Red Chili & Ajwain Macro',
           caption: 'Detailed texture revealing coarse sun-dried chili flakes and carom seeds embedded in dough.',
           alt: 'Close-up macro of raw dough disc showing red chili flakes and carom seeds',

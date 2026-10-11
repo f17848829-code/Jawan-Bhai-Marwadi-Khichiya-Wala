@@ -13,7 +13,7 @@ import {
   Store,
   ChevronRight
 } from 'lucide-react';
-import { BUSINESS_CONFIG, PackagedProduct } from '../config/business';
+import { BUSINESS_CONFIG, PackagedProduct, heroMarwadiKhichiya } from '../config/business';
 import { ProductCard } from '../components/ProductCard';
 import { ServingPolicyBanner } from '../components/ServingPolicyBanner';
 
@@ -99,7 +99,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
               <div className="relative rounded-2xl overflow-hidden border-2 border-amber-300/30 shadow-2xl bg-black/40 aspect-4/3">
                 {!heroImgError ? (
                   <img
-                    src="/src/assets/images/hero_marwadi_khichiya_1791632824607.jpg"
+                    src={heroMarwadiKhichiya}
                     alt="Authentic fresh roasted Marwari Khichiya topped with butter, sev, and chutney on antique brassware"
                     referrerPolicy="no-referrer"
                     onError={() => setHeroImgError(true)}

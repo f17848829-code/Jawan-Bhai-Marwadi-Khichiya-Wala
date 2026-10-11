@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter, HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { MobileActionBar } from './components/MobileActionBar';
@@ -13,6 +13,15 @@ import { WeddingHotelOrdersPage } from './pages/WeddingHotelOrdersPage';
 import { OurStoryPage } from './pages/OurStoryPage';
 import { ContactPage } from './pages/ContactPage';
 import { WhatsAppEnquiryParams } from './utils/whatsapp';
+
+// Automatic detection: GitHub Pages serves from subdirectories where HashRouter
+// guarantees zero 404 blank screens on refresh or direct links.
+const isGitHubPages = typeof window !== 'undefined' && (
+  window.location.hostname.includes('github.io') ||
+  window.location.hash.startsWith('#/')
+);
+
+const Router = isGitHubPages ? HashRouter : BrowserRouter;
 
 // Scrolls window to top whenever route changes
 function ScrollToTop() {
@@ -39,7 +48,7 @@ export default function App() {
   };
 
   return (
-    <BrowserRouter>
+    <Router>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-[#FAF6F0] text-[#2C1810]">
         {/* Header following the 3-Zone contract */}
@@ -120,6 +129,6 @@ export default function App() {
           initialParams={enquiryParams}
         />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }

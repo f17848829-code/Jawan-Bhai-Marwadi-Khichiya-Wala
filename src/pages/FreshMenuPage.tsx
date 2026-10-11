@@ -12,7 +12,7 @@ import {
   ChefHat,
   ImageOff
 } from 'lucide-react';
-import { BUSINESS_CONFIG, FreshMenuItem } from '../config/business';
+import { BUSINESS_CONFIG, FreshMenuItem, freshMasalaKhichiyaShop } from '../config/business';
 
 interface FreshMenuPageProps {
   onOpenEnquiry: (params?: any) => void;
@@ -80,7 +80,7 @@ export const FreshMenuPage: React.FC<FreshMenuPageProps> = ({ onOpenEnquiry }) =
         <div className="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-4/3 bg-stone-100 shadow-sm border border-stone-200">
           {!imgError ? (
             <img
-              src="/src/assets/images/fresh_masala_khichiya_shop_1791632879456.jpg"
+              src={freshMasalaKhichiyaShop}
               alt="Freshly prepared street-style Masala Khichiya topped with yellow butter, coriander, diced vegetables, and crunchy sev"
               referrerPolicy="no-referrer"
               onError={() => setImgError(true)}
